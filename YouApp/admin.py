@@ -12,17 +12,17 @@ class DriverAdmin(admin.ModelAdmin):
 
 @admin.register(Assignment)
 class AssignmentAdmin(admin.ModelAdmin):
-    pass
+    list_display = ('vehicle', 'driver', 'destination', 'departure', 'arrival', 'description')
 
 @admin.register(Vehicle)
 class VehicleAdmin(admin.ModelAdmin):
-    pass
+    list_display = ('name', 'number', 'chassis', 'year_make', 'purchase_price')
 
 @admin.register(Service)
 class ServiceAdmin(admin.ModelAdmin):
-    pass
+    list_display = ('vehicle', 'details_of_service', 'comment', 'serviced_on', 'scheduled_service', 'cost')
 
 @admin.register(Fuel)
 class FuelAdmin(admin.ModelAdmin):
-    pass
+    list_display = ('vehicle', 'speedometer', 'litres', 'reading_on', 'cost')
 
