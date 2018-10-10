@@ -73,10 +73,11 @@ class Fuel(models.Model):
     litres = models.FloatField()
     cost = models.FloatField()
     reading_on = models.DateTimeField(default=datetime.now)
+
     
 
     def __str__(self):
-        return self.last_reading
+        return str(self.litres)
 
      
 
